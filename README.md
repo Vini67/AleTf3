@@ -58,16 +58,4 @@ http://localhost/api/posts
 
 ---
 
-## API
 
-* `GET /api/posts` → listar posts
-* `GET /api/posts/:id` → obter post
-* `POST /api/posts` → criar post
-* `PUT /api/posts/:id` → atualizar post
-* `DELETE /api/posts/:id` → remover post
-
----
-
-## Persistência
-
-O banco de dados utiliza um **volume Docker** chamado `blog-data`, garantindo que os dados permaneçam mesmo após reiniciar os containers.

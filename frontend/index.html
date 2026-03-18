@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
+</head>
+
+<body>
+
+<h1>Blog UniFAAT</h1>
+
+<button onclick="carregarPosts()">Ver Posts</button>
+
+<ul id="posts"></ul>
+
+<script>
+
+function carregarPosts(){
+
+fetch("/api/posts")
+.then(res => res.json())
+.then(data => {
+
+let lista = document.getElementById("posts")
+
+lista.innerHTML=""
+
+data.forEach(post => {
+
+lista.innerHTML += `<li>${post.titulo}</li>`
+
+})
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
